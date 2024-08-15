@@ -36,7 +36,23 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
 #
- 
+
 # OASIS HOTEL
 
-* NEXT DOC's  https://nextjs.org/docs
+- NEXT DOC's https://nextjs.org/docs
+
+### IMAGES
+
+<h3>IMPROVEMENTS</h3>
+<img alt="image app" src="./public/image-app1.png" />
+
+<h3>NEXT APP OR PAGE ROUTER</h3>
+<img alt="image app" src="./public/image-app2.png" />
+
+<h3>RSC ARCHITECTURE</h3>
+<img alt="image app" src="./public/image-app3.png" />
+
+<h3>SERVER X CLIENT</h3>
+<img alt="image app" src="./public/image-app4.png" />
+
+<hr/>
