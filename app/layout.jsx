@@ -9,6 +9,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang='en'>
+      {/* <link href='./globals.css' rel='stylesheet' /> */}
+
       <body>
         <header>
           <Logo />
