@@ -57,11 +57,11 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 <hr/>
 
-<h3>SERVER X CLIENT</h3>
+<h3>RSC & RSS</h3>
 <img style="width: 75%" alt="image app" src="./public/next-image1.png" />
 
-<h3>SERVER X CLIENT</h3>
+<h3>REQUIREMENTS</h3>
 <img style="width: 75%" alt="image app" src="./public/next-image2.png" />
 
-<h3>SERVER X CLIENT</h3>
+<h3>FEATURES PAGES</h3>
 <img style="width: 75%" alt="image app" src="./public/next-image3.png" />
