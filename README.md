@@ -56,3 +56,12 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 <img alt="image app" src="./public/image-app4.png" />
 
 <hr/>
+
+<h3>SERVER X CLIENT</h3>
+<img alt="image app" src="./public/next-image1.png" />
+
+<h3>SERVER X CLIENT</h3>
+<img alt="image app" src="./public/next-image2.png" />
+
+<h3>SERVER X CLIENT</h3>
+<img alt="image app" src="./public/next-image3.png" />

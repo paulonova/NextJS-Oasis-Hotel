@@ -1,5 +1,6 @@
-import Logo from './components/Logo'
-import Navigation from './components/Navigation'
+import Logo from '@/app/_components/Logo'
+import Navigation from '@/app/_components/Navigation'
+import '@/app/_styles/globals.css'
 
 export const metadata = {
   title: 'Oasis Hotel',
@@ -18,9 +19,7 @@ export default function RootLayout({ children }) {
         </header>
 
         <main>{children}</main>
-        <footer className='text-red-700 text-xl'>
-          Copyright by The Wild Programmer
-        </footer>
+        <footer>Copyright by The Wild Programmer</footer>
       </body>
     </html>
   )
