@@ -44,24 +44,24 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ### IMAGES
 
 <h3>IMPROVEMENTS</h3>
-<img style="width: 45%" alt="image app" src="./public/image-app1.png" />
+<img style="width: 75%" alt="image app" src="./public/image-app1.png" />
 
 <h3>NEXT APP OR PAGE ROUTER</h3>
-<img style="width: 45%" alt="image app" src="./public/image-app2.png" />
+<img style="width: 75%" alt="image app" src="./public/image-app2.png" />
 
 <h3>RSC ARCHITECTURE</h3>
-<img style="width: 45%" alt="image app" src="./public/image-app3.png" />
+<img style="width: 75%" alt="image app" src="./public/image-app3.png" />
 
 <h3>SERVER X CLIENT</h3>
-<img style="width: 45%" alt="image app" src="./public/image-app4.png" />
+<img style="width: 75%" alt="image app" src="./public/image-app4.png" />
 
 <hr/>
 
 <h3>SERVER X CLIENT</h3>
-<img style="width: 45%" alt="image app" src="./public/next-image1.png" />
+<img style="width: 75%" alt="image app" src="./public/next-image1.png" />
 
 <h3>SERVER X CLIENT</h3>
-<img style="width: 45%" alt="image app" src="./public/next-image2.png" />
+<img style="width: 75%" alt="image app" src="./public/next-image2.png" />
 
 <h3>SERVER X CLIENT</h3>
-<img style="width: 45%" alt="image app" src="./public/next-image3.png" />
+<img style="width: 75%" alt="image app" src="./public/next-image3.png" />
