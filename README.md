@@ -65,3 +65,46 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 <h3>FEATURES PAGES</h3>
 <img style="width: 75%" alt="image app" src="./public/next-image3.png" />
+
+### HEROICONS/REACT
+
+```
+npm i @heroicons/react
+```
+
+### META DATA
+
+<p><strong>%s</strong> will get replaced by wherever the title I pass in each page </p>
+
+```
+export const metadata = {
+  title: {
+    template: '%s / The Oasis Hotel',
+    default: 'Welcome / The Oasis Hotel',
+  },
+}
+```
+
+OBS: \* Each page should have it's own metadata function.
+
+### FAV ICON
+
+<p>By convention, Next.js set the fav-icon automatically if I set an image with name <strong>icon</strong>. The type can be anything but the name must be <strong>icon</strong></p>
+
+### NEXT FONTS
+
+<h3>LOCAL</h3>
+
+```
+import localFont from '@next/font/local'
+const myFont = localFont({src: './my-font.woff2'})
+```
+
+<h3>FROM GOOGLE</h3>
+
+LINK: https://nextjs.org/docs/pages/building-your-application/optimizing/fonts
+
+```
+import {Josefin_Sans} from 'next/font/google'
+<element className={`${josefinSans.className}`}></element>
+```
