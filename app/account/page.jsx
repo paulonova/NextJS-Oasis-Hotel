@@ -1,10 +1,13 @@
-import React from 'react'
-
 export const metadata = {
   title: 'Guest area',
 }
 function Page() {
-  return <h1>This is Account</h1>
+  return (
+    <h2 className='font-semibold text-2xl text-accent-400 mb-7'>
+      {' '}
+      Welcome Paulao!
+    </h2>
+  )
 }
 
 export default Page
