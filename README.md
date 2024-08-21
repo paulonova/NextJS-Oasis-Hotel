@@ -145,3 +145,18 @@ npm i @supabase/supabase-js
     }
 }
 ```
+
+### NOT-FOUND PAGE
+
+- Can be called in a fetch function to return a not-found page
+
+```
+import { notFound } from 'next/navigation'
+
+
+  if(error) {
+    notFound()
+  }
+```
+
+- notFound() will trigger the not-found page
