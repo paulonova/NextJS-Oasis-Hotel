@@ -1,13 +1,14 @@
 import React from 'react'
-import Counter from '@/app/_components/Counter'
 import CabinCard from '../_components/CabinCard'
+import { getCabins } from '../_lib/data-service'
 
 export const metadata = {
   title: 'Cabins',
 }
 async function Page() {
   // CHANGE
-  const cabins = []
+  const cabins = await getCabins()
+  console.log('CABINS: ', cabins)
 
   return (
     <div>

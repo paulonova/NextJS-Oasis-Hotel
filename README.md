@@ -108,3 +108,19 @@ LINK: https://nextjs.org/docs/pages/building-your-application/optimizing/fonts
 import {Josefin_Sans} from 'next/font/google'
 <element className={`${josefinSans.className}`}></element>
 ```
+
+### SUPABASE INPLEMENT
+
+```
+npm i @supabase/supabase-js
+```
+
+<h3>ENVIRONMENT VARIABLES</h3>
+
+- [NEXT_PUBLIC_] prefix leaks the info to the server and client side. (Be carefull)
+
+- Without [NEXT_PUBLIC_] prefix the variable is available only for local environment
+
+### SUSPENSE
+
+<p>The Suspense component in Next.js is a React feature that allows you to display a fallback UI while waiting for some asynchronous operation to complete, such as data fetching or code splitting. This is particularly useful for improving user experience by showing a loading indicator or placeholder content instead of a blank screen.</p>
