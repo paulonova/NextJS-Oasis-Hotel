@@ -124,3 +124,24 @@ npm i @supabase/supabase-js
 ### SUSPENSE
 
 <p>The Suspense component in Next.js is a React feature that allows you to display a fallback UI while waiting for some asynchronous operation to complete, such as data fetching or code splitting. This is particularly useful for improving user experience by showing a loading indicator or placeholder content instead of a blank screen.</p>
+
+<p>The Suspense needs to be outside of the component that is being fetched</p>
+
+```
+  <Suspense fallback={<Spinner />}>
+    <CabinList />
+  </Suspense>
+```
+
+### GENERATE METADATA
+
+```
+  // needs to be called generateMetadata
+  export async function generateMetadata({ params }) {
+  const cabin = await getCabin(params.cabinId)
+    return {
+      title: `Cabin ${cabin.name}`,
+      description: `Cabin details page`,
+    }
+}
+```
