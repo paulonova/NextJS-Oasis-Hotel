@@ -180,3 +180,11 @@ export async function generateStaticParams() {
 ### SSG - Static Site Generation
 
 In next.config.mjs, we set the output to export, so the app will be built as a static site.
+
+### ISR - Incremental Static Regeneration / Revalidate
+
+```
+export const revalidate = 3600 // In seconds (1 hour)
+```
+
+### UNSTABLE_NOSTORE / NOSTORE
