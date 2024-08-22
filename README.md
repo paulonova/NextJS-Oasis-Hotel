@@ -160,3 +160,23 @@ import { notFound } from 'next/navigation'
 ```
 
 - notFound() will trigger the not-found page
+
+### DYNAMIC RENDERING TO STATIC RENDERING
+
+<p>cabinId is dynamic, so it's rendered dynamically because it uses the params as a props.</p>
+<p>To convert to static rendering, we need to generateStaticParams() function, that will return an array of cabinId's, like this: </p>
+
+```
+export async function generateStaticParams() {
+  const cabins = await getCabins()
+  return cabins.map((cabin) => ({
+    cabinId: toString(cabin.id),
+  }))
+}
+```
+
+- It will improve the performance!
+
+### SSG - Static Site Generation
+
+In next.config.mjs, we set the output to export, so the app will be built as a static site.

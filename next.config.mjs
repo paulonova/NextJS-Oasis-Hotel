@@ -10,6 +10,7 @@ const nextConfig = {
       },
     ],
   },
+  // output: 'export', //Only for production
 }
 
 export default nextConfig
