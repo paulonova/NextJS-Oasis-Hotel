@@ -188,3 +188,10 @@ export const revalidate = 3600 // In seconds (1 hour)
 ```
 
 ### UNSTABLE_NOSTORE / NOSTORE
+
+```
+import { unstable_noStore as noStore } from 'next/cache'
+
+noStore()
+
+```
