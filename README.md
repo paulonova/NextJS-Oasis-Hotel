@@ -163,6 +163,9 @@ import { notFound } from 'next/navigation'
 
 ### DYNAMIC RENDERING TO STATIC RENDERING
 
+<hr/>
+<img style="width: 75%" alt="image app" src="./public/dynamic-image.png" />
+
 <p>cabinId is dynamic, so it's rendered dynamically because it uses the params as a props.</p>
 <p>To convert to static rendering, we need to generateStaticParams() function, that will return an array of cabinId's, like this: </p>
 
