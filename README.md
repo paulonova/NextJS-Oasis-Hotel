@@ -213,3 +213,9 @@ PS: Only available in Pages not in Server Components!
 <h3>useSearchParams & useRouter Hooks</h3>
 
 ### Server Components in Client Components
+
+### INSTALL react-day-picker
+
+```
+npm install react-day-picker
+```

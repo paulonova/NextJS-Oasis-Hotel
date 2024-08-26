@@ -12,7 +12,7 @@ export async function getCabin(id) {
     .single()
 
   // For testing
-  // await new Promise((res) => setTimeout(res, 1000));
+  await new Promise((res) => setTimeout(res, 2000))
 
   if (error) {
     console.error(error)
@@ -100,6 +100,8 @@ export async function getBookedDatesByCabinId(cabinId) {
   today.setUTCHours(0, 0, 0, 0)
   today = today.toISOString()
 
+  // await new Promise((res) => setTimeout(res, 2000))
+
   // Getting all bookings
   const { data, error } = await supabase
     .from('bookings')
@@ -127,6 +129,8 @@ export async function getBookedDatesByCabinId(cabinId) {
 
 export async function getSettings() {
   const { data, error } = await supabase.from('settings').select('*').single()
+
+  // await new Promise((res) => setTimeout(res, 1000))
 
   if (error) {
     console.error(error)
