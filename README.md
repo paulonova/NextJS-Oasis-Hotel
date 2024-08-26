@@ -217,3 +217,9 @@ PS: Only available in Pages not in Server Components!
 ```
 npm install react-day-picker
 ```
+
+<hr/>
+
+### NEXT API ROUTES - NextResponse
+
+LINK: https://developer.mozilla.org/en-US/docs/Web/API/Response
