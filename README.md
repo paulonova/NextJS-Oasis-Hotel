@@ -198,3 +198,18 @@ import { unstable_noStore as noStore } from 'next/cache'
 noStore()
 
 ```
+
+### Params & SearchParams
+
+1- function Page({ params }) => params gets the ID from url
+ex: https://www.website.com/cabin/29 id = 29
+
+2 -function Page({ searchParams }) => gets the search params from url
+ex: https://www.website.com/cabin?capacity=small  
+returns {capacity: ’small’}
+
+PS: Only available in Pages not in Server Components!
+
+<h3>useSearchParams & useRouter Hooks</h3>
+
+### Server Components in Client Components
