@@ -210,9 +210,7 @@ returns {capacity: ’small’}
 
 PS: Only available in Pages not in Server Components!
 
-<h3>useSearchParams & useRouter Hooks</h3>
-
-### Server Components in Client Components
+<h4>useSearchParams & useRouter Hooks</h4>
 
 ### INSTALL react-day-picker
 

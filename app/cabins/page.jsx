@@ -2,6 +2,7 @@ import React, { Suspense } from 'react'
 import CabinList from '../_components/CabinList'
 import Spinner from '../_components/Spinner'
 import Filter from '../_components/FIlter'
+import ReservationReminder from '../_components/ReservationReminder'
 
 // As I use searchParams in the CabinList component, I don't need to use revalidate
 //export const revalidate = 3600 // In seconds
@@ -32,6 +33,7 @@ function Page({ searchParams }) {
 
       <Suspense fallback={<Spinner />} key={filter}>
         <CabinList filter={filter} />
+        <ReservationReminder />
       </Suspense>
     </div>
   )
