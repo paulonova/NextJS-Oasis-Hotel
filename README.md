@@ -223,3 +223,9 @@ npm install react-day-picker
 ### NEXT API ROUTES - NextResponse
 
 LINK: https://developer.mozilla.org/en-US/docs/Web/API/Response
+
+### NEXT AUTH JS
+
+```
+npm install next-auth@beta
+```
