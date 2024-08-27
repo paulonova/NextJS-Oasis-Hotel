@@ -229,3 +229,49 @@ LINK: https://developer.mozilla.org/en-US/docs/Web/API/Response
 ```
 npm install next-auth@beta
 ```
+
+### NEXT MIDDLEWARE
+
+<p>Middleware is a function that runs before the page or route is rendered. It can be used to modify the request or response, or to perform other tasks.</p>
+
+1- Create a middleware.js file in the root of the app
+
+```
+export function middleware(request) {
+  console.log('middleware:', request)
+}
+```
+
+<p>Middleware can also redirect the user to a different page.</p>
+
+```
+export function middleware(request) {
+  return NextResponse.redirect(new URL('/about', request.url))
+}
+
+// Only run in specific pages to avoid infinite redirect
+export const config = {
+  matcher: ['/account'],
+}
+```
+
+## IMPORTANT!
+
+###
+
+### NEXT AUTH ACTIONS
+
+<p>To use the actions in next auth, we need to create a form and a submit button. Because for example the signInButton is a server component and doesn´t accept actions.</p>
+
+<p>To fix this, we need to create an action in the next auth lib, that will be used in the form submit button.</p>
+
+```
+import { signInAction } from '../_lib/actions'
+```
+
+```
+function SignInButton() {
+  return (
+    <form action={signInAction}>
+      <button className='flex items-center gap-6 text-lg border border-primary-300 px-10 py-4 font-medium'>
+```
