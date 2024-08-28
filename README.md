@@ -290,3 +290,16 @@ Using "use server" at the beginning of the function.</p>
 ### USE FORM STATUS HOOKS
 
 <p>The useFormStatus hook is a React hook that provides information about the current state of a form submission. It returns an object with two properties: pending and method. The pending property is a boolean that indicates whether the form is currently being submitted, and the method property is a string that indicates the HTTP method used to submit the form (e.g. "POST").</p>
+
+### USE TRANSITION HOOK
+
+<p>The useTransition hook is a React hook that provides information about the current state of a transition. It returns an object with two properties: pending and startTransition. The pending property is a boolean that indicates whether the transition is currently being processed, and the startTransition property is a function that can be used to start a transition.</p>
+
+```
+const [isPending, startTransition] = useTransition()
+
+  function handleDelete() {
+    if (confirm('Are you sure you want to delete this reservation?'))
+      startTransition(() => deleteBooking(bookingId))
+  }
+```

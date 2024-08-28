@@ -62,6 +62,7 @@ export async function deleteBooking(bookingId) {
   const session = await auth()
   if (!session) throw new Error('You must be logged in')
 
+  //Prevent deleting bookings from terminal via cURL
   const guestBookings = await getBookings(session.user.guestId)
   const guestBookingIds = guestBookings.map((booking) => booking.id)
 
