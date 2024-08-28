@@ -286,3 +286,7 @@ Using "use server" at the beginning of the function.</p>
 ```
 
 ```
+
+### USE FORM STATUS HOOKS
+
+<p>The useFormStatus hook is a React hook that provides information about the current state of a form submission. It returns an object with two properties: pending and method. The pending property is a boolean that indicates whether the form is currently being submitted, and the method property is a string that indicates the HTTP method used to submit the form (e.g. "POST").</p>
