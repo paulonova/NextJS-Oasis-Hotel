@@ -275,3 +275,14 @@ function SignInButton() {
     <form action={signInAction}>
       <button className='flex items-center gap-6 text-lg border border-primary-300 px-10 py-4 font-medium'>
 ```
+
+### SERVER ACTIONS
+
+<p>Server actions are functions that run on the server. They are executed in response to a user action, such as a form submission. Server actions can be used to perform tasks like data validation, database updates, and sending emails.</p>
+
+<p>To create a server action, we need to create a function and export it as an action. 
+Using "use server" at the beginning of the function.</p>
+
+```
+
+```

@@ -1,17 +1,25 @@
 'use client'
 import { useState } from 'react'
+import { updateGuest } from '@/app/_lib/actions'
 
-function UpdateProfileForm({ children }) {
+function UpdateProfileForm({ children, guest }) {
   const [count, setCount] = useState(0)
-  const countryFlag = 'pt.jpg'
+
+  const { fullName, email, nationality, nationalID, countryFlag } = guest
+  console.log('countryFlag: ', countryFlag)
 
   return (
-    <form className='bg-primary-900 py-8 px-12 text-lg flex gap-6 flex-col'>
+    <form
+      className='flex flex-col gap-6 bg-primary-900 px-12 py-8 text-lg'
+      action={updateGuest}
+    >
       <div className='space-y-2'>
-        <label>Full name</label>
+        <label>Full Name</label>
         <input
           disabled
-          className='px-5 py-3 bg-primary-200 text-primary-800 w-full shadow-sm rounded-sm disabled:cursor-not-allowed disabled:bg-gray-600 disabled:text-gray-400'
+          name='fullName'
+          defaultValue={fullName}
+          className='w-full rounded-sm bg-primary-200 px-5 py-3 text-primary-800 shadow-sm disabled:cursor-not-allowed disabled:bg-gray-600 disabled:text-gray-400'
         />
       </div>
 
@@ -19,7 +27,9 @@ function UpdateProfileForm({ children }) {
         <label>Email address</label>
         <input
           disabled
-          className='px-5 py-3 bg-primary-200 text-primary-800 w-full shadow-sm rounded-sm disabled:cursor-not-allowed disabled:bg-gray-600 disabled:text-gray-400'
+          name='email'
+          defaultValue={email}
+          className='w-full rounded-sm bg-primary-200 px-5 py-3 text-primary-800 shadow-sm disabled:cursor-not-allowed disabled:bg-gray-600 disabled:text-gray-400'
         />
       </div>
 
@@ -40,12 +50,13 @@ function UpdateProfileForm({ children }) {
         <label htmlFor='nationalID'>National ID number</label>
         <input
           name='nationalID'
-          className='px-5 py-3 bg-primary-200 text-primary-800 w-full shadow-sm rounded-sm'
+          defaultValue={nationalID}
+          className='w-full rounded-sm bg-primary-200 px-5 py-3 text-primary-800 shadow-sm'
         />
       </div>
 
-      <div className='flex justify-end items-center gap-6'>
-        <button className='bg-accent-500 px-8 py-4 text-primary-800 font-semibold hover:bg-accent-600 transition-all disabled:cursor-not-allowed disabled:bg-gray-500 disabled:text-gray-300'>
+      <div className='flex items-center justify-end gap-6'>
+        <button className='bg-accent-500 px-8 py-4 font-semibold text-primary-800 transition-all hover:bg-accent-600 disabled:cursor-not-allowed disabled:bg-gray-500 disabled:text-gray-300'>
           Update profile
         </button>
       </div>

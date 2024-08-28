@@ -1,32 +1,34 @@
 import SelectCountry from '@/app/_components/SelectCountry'
 import UpdateProfileForm from '@/app/_components/UpdateProfileForm'
+import { auth } from '@/app/_lib/auth'
+import { getGuest } from '@/app/_lib/data-service'
 
 export const metadata = {
   title: 'Update Profile',
 }
 
-export default function Page() {
-  // CHANGE
-  const nationality = 'portugal'
+export default async function Page() {
+  const session = await auth()
+  const guest = await getGuest(session.user.email)
 
   return (
     <div>
-      <h2 className='font-semibold text-2xl text-accent-400 mb-4'>
+      <h2 className='mb-4 text-2xl font-semibold text-accent-400'>
         Update your guest profile
       </h2>
 
-      <p className='text-lg mb-8 text-primary-200'>
+      <p className='mb-8 text-lg text-primary-200'>
         Providing the following information will make your check-in process
         faster and smoother. See you soon!
       </p>
 
-      <UpdateProfileForm>
+      <UpdateProfileForm guest={guest}>
         {/* This is a Server Component and doesn't work in client component, I need to pass as a prop (children) */}
         <SelectCountry
           name='nationality'
           id='nationality'
-          className='px-5 py-3 bg-primary-200 text-primary-800 w-full shadow-sm rounded-sm'
-          defaultCountry={nationality}
+          className='w-full rounded-sm bg-primary-200 px-5 py-3 text-primary-800 shadow-sm'
+          defaultCountry={guest.nationality}
         />
       </UpdateProfileForm>
     </div>
