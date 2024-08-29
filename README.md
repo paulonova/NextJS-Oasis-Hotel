@@ -303,3 +303,30 @@ const [isPending, startTransition] = useTransition()
       startTransition(() => deleteBooking(bookingId))
   }
 ```
+
+### USE OPTIMISTIC HOOKS
+
+LINK: https://react.dev/reference/react/useOptimistic
+
+<p>The useOptimistic hook is a React hook that provides information about the current state of an optimistic update. It returns an object with two properties: optimisticUpdate and setOptimisticUpdate. The optimisticUpdate property is a function that can be used to update the state of the component, and the setOptimisticUpdate property is a function that can be used to set the state of the component.</p>
+
+```
+const [optimisticBookings, optimisticDelete] = useOptimistic(
+  bookings,
+  (curBookings, bookingId) => {
+    return curBookings.filter((booking) => booking.id !== bookingId)
+  },
+)
+
+return (
+    <ul className='space-y-6'>
+      {optimisticBookings.map((booking) => (
+        <ReservationCard
+          booking={booking}
+          key={booking.id}
+          onDelete={handleDelete}
+        />
+      ))}
+    </ul>
+  )
+```

@@ -55,7 +55,7 @@ export async function createBooking(bookingData, formData) {
 
   revalidatePath(`/cabins/${bookingData.cabinId}`)
 
-  redirect('/cabins/thankyou')
+  redirect('/thankyou')
 }
 
 export async function deleteBooking(bookingId) {
@@ -107,7 +107,7 @@ export async function updateBooking(formData) {
   // 5) Error handling
   if (error) throw new Error('Booking could not be updated')
 
-  // 6) Revalidation
+  // 6) Revalidation before redirecting
   revalidatePath(`/account/reservations/edit/${bookingId}`)
   revalidatePath('/account/reservations')
 
