@@ -43,7 +43,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ### IMAGES
 
-<h3>IMPROVEMENTS</h3>
 <img style="width: 75%" alt="image app" src="./public/image-app1.png" />
 
 <h3>NEXT APP OR PAGE ROUTER</h3>
